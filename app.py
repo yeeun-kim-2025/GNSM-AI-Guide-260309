@@ -53,13 +53,20 @@ def main():
             st.write("🤖")
     with col_title:
         if language == "English":
-            st.markdown("# Gwacheon National Science Museum AI Guide!")
+            st.markdown('<h1 class="app-main-title">Gwacheon National Science Museum AI Guide!</h1>', unsafe_allow_html=True)
         else:
-            st.markdown("# 국립과천과학관 AI 가이드!")
+            st.markdown('<h1 class="app-main-title">국립과천과학관 AI 가이드!</h1>', unsafe_allow_html=True)
     
     # 기본 스타일링
     st.markdown("""
     <style>
+        .app-main-title {
+            font-size: 2.25rem !important;
+            line-height: 1.2 !important;
+            font-weight: 700 !important;
+            margin: 0.25rem 0 0.75rem 0 !important;
+        }
+
         /* 사용자 메시지 스타일 - 과학관 테마색 (보라/파랑 계열) */
         .stChatMessage[data-testid="user-message"] {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
